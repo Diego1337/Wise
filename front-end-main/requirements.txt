@@ -1,0 +1,9 @@
+Flask
+Flask-SQLAlchemy
+Flask-Cors
+PyMySQL
+sqlalchemy-utils
+pandas
+selenium
+webdriver-manager
+beautifulsoup4

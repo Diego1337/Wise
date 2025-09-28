@@ -1,0 +1,8 @@
+from . import db
+
+class Produto(db.Model):
+    __tablename__ = 'tbl_produto'
+    id_prdt = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    nome_prdt = db.Column(db.String(255))
+    descricao_prdt = db.Column(db.String(255))
+    data_prdt = db.Column(db.Date, default=db.func.current_date())

@@ -1,0 +1,1 @@
+# para o python reconhecer a pasta de rotas, este arquivo se faz necessário
