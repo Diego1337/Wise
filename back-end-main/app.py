@@ -9,6 +9,7 @@ from routes.fornecedor_routes import fornecedor_bp
 from routes.preco_routes import preco_bp
 from routes.produto_mp_routes import produto_mp_bp
 from routes.view_routes import view_bp
+from routes.dashboard_routes import dashboard_bp
 from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
 
@@ -27,6 +28,7 @@ app.register_blueprint(preco_bp)
 app.register_blueprint(produto_mp_bp)
 app.register_blueprint(view_bp)
 app.register_blueprint(xml_bp)
+app.register_blueprint(dashboard_bp)
 
 @app.route('/')
 def index():

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import React from "react";
+import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,7 +8,7 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
+} from "chart.js";
 
 // Registra os componentes necessários do Chart.js
 ChartJS.register(
@@ -29,13 +29,13 @@ const BarChart = ({ data: chartData }) => {
 
   // Transforma os dados recebidos para o formato que o Chart.js espera
   const data = {
-    labels: chartData.map(item => item.product), // Nomes dos produtos no eixo X
+    labels: chartData.map((item) => item.product), // Nomes dos produtos no eixo X
     datasets: [
       {
-        label: 'Valor Vendido',
-        data: chartData.map(item => item.value), // Valores no eixo Y
-        backgroundColor: 'rgba(116, 12, 12, 0.6)',
-        borderColor: 'rgba(116, 12, 12, 1)',
+        label: "Valor Vendido",
+        data: chartData.map((item) => item.value), // Valores no eixo Y
+        backgroundColor: "rgba(116, 12, 12, 0.6)",
+        borderColor: "rgba(116, 12, 12, 1)",
         borderWidth: 1,
       },
     ],
@@ -53,14 +53,14 @@ const BarChart = ({ data: chartData }) => {
       },
     },
     scales: {
-        y: {
-            beginAtZero: true
-        }
-    }
+      y: {
+        beginAtZero: true,
+      },
+    },
   };
 
   return (
-    <div style={{ height: '300px', width: '100%' }}>
+    <div style={{ height: "300px", width: "100%" }}>
       <Bar options={options} data={data} />
     </div>
   );

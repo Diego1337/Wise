@@ -21,7 +21,9 @@ const Dashboard = () => {
         );
         const historyResponse = await axios.get("/api/vw_historico_precos_mp");
 
-        setSalesData(Array.isArray(salesResponse.data) ? salesResponse.data : []);
+        setSalesData(
+          Array.isArray(salesResponse.data) ? salesResponse.data : []
+        );
         setSpendingData(spendingResponse.data);
         setHistoryData(historyResponse.data);
       } catch (error) {
@@ -71,7 +73,9 @@ const Dashboard = () => {
 
         <div className="card chart-card" style={{ gridColumn: "1 / -1" }}>
           <div className="chart-header">
-            <h2 className="chart-title">Histórico de valores por matéria prima</h2>
+            <h2 className="chart-title">
+              Histórico de valores por matéria prima
+            </h2>
             <select className="dropdown">
               <option>2024</option>
             </select>
