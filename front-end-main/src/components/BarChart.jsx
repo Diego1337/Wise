@@ -21,6 +21,12 @@ ChartJS.register(
 );
 
 const BarChart = ({ data: chartData }) => {
+  // Verifica se chartData é uma array válida
+  if (!Array.isArray(chartData)) {
+    console.error("chartData não é uma array válida:", chartData);
+    return <div>Erro ao carregar os dados do gráfico.</div>;
+  }
+
   // Transforma os dados recebidos para o formato que o Chart.js espera
   const data = {
     labels: chartData.map(item => item.product), // Nomes dos produtos no eixo X

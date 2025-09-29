@@ -5,6 +5,12 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const PieChart = ({ data: chartData }) => {
+  // Adiciona validação para garantir que chartData seja um array
+  if (!Array.isArray(chartData)) {
+    console.error('chartData não é um array:', chartData);
+    chartData = [];
+  }
+
   // Transforma os dados para o formato do gráfico de pizza
   const data = {
     labels: chartData.map(item => item.material),
